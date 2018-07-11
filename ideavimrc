@@ -4,3 +4,5 @@ set showmode
 set surround
 
 inoremap jk <ESC>
+
+" vim: set filetype=vim:
