@@ -1,0 +1,6 @@
+set showmode
+
+" enable vim-surround plugin
+set surround
+
+inoremap jk <ESC>
