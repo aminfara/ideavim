@@ -22,4 +22,12 @@ inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
 inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
 inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
 inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
+
+" comment a line, similar to tpope/vim-commentary
+" Those <bs> may not be needed
+" https://gist.github.com/lpld/8dc1c6f3e942c5685f65566756ca7d27
+nnoremap gcc :action CommentByLineComment<CR>
+vnoremap gc :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
+nnoremap gcap vap:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
+
 " vim: set filetype=vim:
