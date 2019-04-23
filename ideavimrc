@@ -1,9 +1,14 @@
 set showmode
 set ignorecase
 set smartcase
+set relativenumber
+set number
 
 " 3 lines above/below cursor when scrolling
 set scrolloff=3
+
+" 5 columns before/after cursor when horizontal scrolling
+set sidescrolloff=5
 
 " Integrate with system clipboard
 set clipboard=unnamedplus,unnamed
