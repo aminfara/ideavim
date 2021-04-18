@@ -3,36 +3,24 @@ set ignorecase
 set smartcase
 set relativenumber
 set number
-
-" 3 lines above/below cursor when scrolling
 set scrolloff=3
-
-" 5 columns before/after cursor when horizontal scrolling
 set sidescrolloff=5
-
-" Integrate with system clipboard
 set clipboard=unnamedplus,unnamed
+set showcmd
 
-" enable vim-surround plugin
+" Shifted arrow keys start selection mode
+set selectmode=mouse,key,ideaselection
+set keymodel=startsel,stopselect
+
+" idea specific settings
+set ideajoin
+
+set commentary
 set surround
 
+" Keyboard mappings
+let mapleader=","
 inoremap jk <ESC>
-
-nnoremap <S-Left> :action EditorLeftWithSelection<CR>
-nnoremap <S-Right> :action EditorRightWithSelection<CR>
-nnoremap <S-Up> :action EditorUpWithSelection<CR>
-nnoremap <S-Down> :action EditorDownWithSelection<CR>
-
-inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
-inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
-inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
-inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
-
-" comment a line, similar to tpope/vim-commentary
-" Those <bs> may not be needed
-" https://gist.github.com/lpld/8dc1c6f3e942c5685f65566756ca7d27
-nnoremap gcc :action CommentByLineComment<CR>
-vnoremap gc :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
-nnoremap gcap vap:<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action CommentByLineComment<CR>gv
+nnoremap <leader>v <c-v>
 
 " vim: set filetype=vim:
